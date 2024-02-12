@@ -9,7 +9,7 @@ const useGetComments = (id)=>{
     },[])
 
     const getCommentsData=async()=>{
-        const comments = await fetch("https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.commentThreads.list?part=snippet,replies&key="+GOOGLE_API_KEY+"&videoId="+id);
+        const comments = await fetch("https://www.googleapis.com/youtube/v3/commentThreads?key="+GOOGLE_API_KEY+"&textFormat=plainText&part=snippet&videoId="+id+"&maxResults=50");
         const jsonComments = await comments.json();
         setData(jsonComments);
     }

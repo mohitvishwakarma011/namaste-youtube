@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GOOGLE_API_LINK } from "../utils/constants";
+import { MOST_POPULAR_VIDEOS_API_LINK } from "../utils/constants";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const VideoContainer = () => {
   }, []);
 
   const getData = async () => {
-    const apiData = await fetch(GOOGLE_API_LINK);
+    const apiData = await fetch(MOST_POPULAR_VIDEOS_API_LINK);
     const jsonData = await apiData.json();
     setVideos(jsonData.items);
   };

@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import useGetComments from "../hooks/useGetComments";
+import CommentsContainer from "./CommentsContainer";
+import LiveChat from "./LiveChat";
 
 const WatchPage = () => {
   const dispatch = useDispatch();
@@ -10,17 +12,16 @@ const WatchPage = () => {
   const videoId = searchParams.get("v");
   const commentsData = useGetComments(videoId);
 
-  console.log(commentsData);
-
   useEffect(() => {
     dispatch(closeMenu());
   }, []);
 
   return (
     <div className="w-full grid grid-flow-col">
-      <div className="ms-16 col-span-6 shadow-lg">
+      {/* Video player Container*/}
+      <div className="ms-16 col-span-6 ">
         <iframe
-          className="w-full rounded-lg "
+          className="w-full rounded-lg shadow-lg"
 
           height="450"
           src={"https://www.youtube.com/embed/" + videoId}
@@ -29,10 +30,9 @@ const WatchPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
+        <CommentsContainer/>
       </div>
-      <div className="ms-5 me-16 col-span-4 rounded-lg shadow-lg">
-        SideVideoContainer
-      </div>
+      <LiveChat/>
     </div>
   );
 };
