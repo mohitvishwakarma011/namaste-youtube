@@ -8,7 +8,7 @@ const SideBar = () => {
 
   return (
     isMenuOpen &&
-    <div className='absolute z-10 bg-white p-5 w-44 shadow-lg'>
+    <div className='sticky z-10 bg-white p-5 w-60 shadow-lg col-span-4'>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li>Shorts</li>
