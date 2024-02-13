@@ -5,7 +5,7 @@ import Head from "./Head";
 
 const Body = () => {
   return (
-    <div className="flex w-full">
+    <div className="flex w-12/12">
       <SideBar />
       <Outlet />
     </div>

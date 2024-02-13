@@ -17,17 +17,15 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div className="w-full grid grid-flow-col">
+    <div className=" px-8 relative top-24 w-full flex">
       {/* Video player Container*/}
-      <div className="ms-16 col-span-6 ">
+      <div className=" w-7/12">
         <iframe
           className="w-full rounded-lg shadow-lg"
 
-          height="450"
+          height="500"
           src={"https://www.youtube.com/embed/" + videoId}
           title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
         <CommentsContainer/>

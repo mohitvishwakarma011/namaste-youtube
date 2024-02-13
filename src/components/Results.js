@@ -21,9 +21,8 @@ const Results = () => {
   if(!searchList.length) return;
 
   return (
-    <div className=' mx-5'>
-      {searchList.map(item=><Link to={"/watch/?v="+item.id.videoId} key={item.id.videId} ><SearchCard  data={item}/></Link>)}
-      
+    <div className='relative top-24 mx-5'>
+      {searchList.map(item=><Link key={item.id.videoId} to={"/watch/?v="+item.id.videoId}  ><SearchCard  data={item}/></Link>)}
     </div>
   )
 }

@@ -8,25 +8,30 @@ const SideBar = () => {
 
   return (
     isMenuOpen &&
-    <div className='sticky z-10 bg-white p-5 w-60 shadow-lg col-span-4'>
+    <div className='fixed top-20 z-20 bg-white p-5 shadow-lg w-2/12 overflow-auto whitespace-nowrap'>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li>Shorts</li>
-        <li>Subscription</li>
+        <li className='p-1'><Link to="/">Home</Link></li>
+        <li className='p-1'>Shorts</li>
+        <li className='p-1'>Subscriptions</li>
+        <hr></hr>
+        <li className='font-bold mt-2'>You </li>
+        <li className='p-1'>Your Channel</li>
+        <li className='p-1'>History</li>
+        <li className='p-1'>Your Videos</li>
+        <li className='p-1'>Watch Later</li>
+        <li className='p-1'>Show More</li>
 
-        <li className='font-bold'>You</li>
-        <li>Your Channel</li>
-        <li>History</li>
-        <li>Your Videos</li>
-        <li>Watch Later</li>
-        <li>Show More</li>
-
-        <li className='font-bold'>You</li>
-        <li>Your Channel</li>
-        <li>History</li>
-        <li>Your Videos</li>
-        <li>Watch Later</li>
-        <li>Show More</li>
+        <li className='font-bold'>Explore</li>
+        <li className='p-1'>Trending</li>
+        <li className='p-1'>Shopping</li>
+        <li className='p-1'>Music</li>
+        <li className='p-1'>Films</li>
+        <li className='p-1'>Live</li>
+        <li className='p-1'>Gaming</li>
+        <li className='p-1'>News</li>
+        <li className='p-1'>Sports</li>
+        <li className='p-1'>Learning</li>
+        <li className='p-1'>Fashion & Beauty</li>
       </ul>
     </div>
   )

@@ -19,7 +19,7 @@ const buttonNames = [
 ];
 const ButtonList = () => {
   return (
-    <div className="overflow-x-auto ">
+    <div className="text-center overflow-auto whitespace-nowrap">
         {buttonNames.map((buttonName) => (
           <Button key={buttonName} name={buttonName} />
         ))}

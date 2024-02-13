@@ -21,25 +21,26 @@ const LiveChat = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
-      <div className="mx-1 col-span-4 rounded-lg shadow-lg h-[30rem] bg-gray-100 border overflow-y-scroll flex flex-col-reverse">
+    <div className="flex flex-col w-5/12 px-2">
+      <div className="rounded-lg shadow-lg h-[30rem] bg-gray-100 border flex flex-col-reverse overflow-auto">
         {messages.map((c, i) => (
           <ChatMessage key={i} name={c.name} message={c.message} />
         ))}
       </div>
       <form
+      className="mt-2 w-full"
         onSubmit={(e) => {
           e.preventDefault();
           dispatch(addMessage({name:"MOhit",message:chatText}))
         }}
       >
         <input
-          className="border "
+          className="border p-2 w-8/12"
           type="text"
           value={chatText}
           onChange={(e) => setChatText(e.target.value)}
         ></input>
-        <button type="submit">Send</button>
+        <button className="p-2 bg-gray-300" type="submit">Send</button>
       </form>
     </div>
   );

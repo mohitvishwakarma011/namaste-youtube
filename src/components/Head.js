@@ -45,7 +45,7 @@ const Head = () => {
   };
 
   return (
-    <div className="fixed w-full z-20 grid grid-flow-col p-3  mb-2 shadow-lg bg-white">
+    <div className="fixed w-full z-20 grid grid-flow-col p-3 mb-2 bg-white">
       <div className="flex col-span-1 items-center">
         <img
           className="h-12 cursor-pointer"
